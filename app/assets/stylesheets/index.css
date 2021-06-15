@@ -1,0 +1,48 @@
+.wrapper{
+  height: 100vh;
+  width: 100vw;
+}
+
+.header{
+  height:150px;
+}
+
+#header-main{
+  height: 100%;
+  display: flex; 
+  justify-content: space-between;
+
+}
+
+.header-title{
+  padding-top: 25px;
+  font-size: 60px;
+  text-align: center;
+  width: calc(100% - 150px);
+  background-color: chartreuse;
+}
+
+.header-btns{
+  height: 100%;
+  width: 150px;
+  padding: 10px 0;
+  background-color: red;
+}
+
+#log-in{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+#log-list{
+  display: block;
+}
+
+
+.log-btn{
+  display: block;
+  padding: 15px;
+  border: 1px solid black;
+}

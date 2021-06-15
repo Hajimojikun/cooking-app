@@ -1,0 +1,24 @@
+<div id="header-main">
+
+<div class="header-title">
+hello
+</div>
+
+<div class="header-btns">
+  <ul id="log-list">
+      <%if user_signed_in?%>
+      <div id="sign-up">
+      <li class="log-btn">hello</li>
+      <li class="log-btn"><%=link_to "ログアウト", destroy_user_session_path, method: :delete%></li>
+      </div>
+      <% else %>
+      <div id="log-in">
+      <li class="log-btn"><%=link_to "ログイン", new_user_session_path%></li>
+      <li class="log-btn"><%=link_to "新規作成", new_user_registration_path%></li>
+      <% end %>
+      </div>
+  </ul>
+</div>
+
+</div>
+
