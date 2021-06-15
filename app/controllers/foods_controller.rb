@@ -1,12 +1,20 @@
 class FoodsController < ApplicationController
 
   def index
+    @foods = Food.all.order("created_at DESC")
   end
 
   def new
+    @foods = Food.new()
   end
 
   def create
+    @foods =Food.new(food_params)
+    if @foods.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private

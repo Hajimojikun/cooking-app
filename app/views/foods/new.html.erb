@@ -1,0 +1,70 @@
+
+ <div class="header">
+    <%= render "/shared/header"%>
+    </div>
+
+<div id="new-wrapper">
+   
+    <div id="new-main">
+
+      <div class="items-sell-main">
+    <h2 class="items-sell-title">商品の情報を入力</h2>
+    <%= form_with model: @foods, local: true do |f| %>
+      </div>
+
+      <%# 商品画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        商品画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+        <div id="image-list"></div>
+      </div>
+    </div>
+    <%# /商品画像 %>
+
+    <%# 商品名と商品説明 %>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        料理名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          料理の手順や説明
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :ways, class:"items-text", id:"item-info", placeholder:"料理の手順や説明" %>
+      </div>
+    </div>
+    <%# /商品名と商品説明 %>
+
+    <%# 商品の詳細 %>
+    <div class="items-detail">
+      <div class="weight-bold-text">商品の詳細</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          カテゴリー
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:type_of_food_id, TypeOfFood.all, :id , :name, {}, {class:"select-box", id:"item-category"}) %>
+      </div>
+    </div>
+    <%# /商品の詳細 %>
+
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "出品する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <% end %>
+    <%# /下部ボタン %>
+    </div>
+
+</div>
