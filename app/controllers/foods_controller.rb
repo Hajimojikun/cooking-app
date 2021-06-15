@@ -1,7 +1,12 @@
 class FoodsController < ApplicationController
+  before_action :authenticate_user!, only:[:new, :create, :edit, :update, :destroy]
 
   def index
     @foods = Food.all.order("created_at DESC")
+  end
+
+  def show
+    @food = Food.find(params[:id])
   end
 
   def new
