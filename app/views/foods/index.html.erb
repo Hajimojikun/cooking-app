@@ -10,11 +10,12 @@
           <li class="show-box">
             <div class="boxs">
               <div id="pic">
-              <%=image_tag food.image, size: '300x200'%>
+              <%=link_to (image_tag food.image, size: '300x200'), food_path(food.id)%>
               </div>
               <div id="food-title">
               <h3 id="title"><%= food.name %></h3>
               </div>
+              <div id="food-user-name">by  <%=link_to food.user.nickname, user_path(food.user.id)%></div>
             </div>
           </li>
           <% end %>
@@ -26,4 +27,9 @@
 <%= link_to(new_food_path, class: 'purchase-btn') do %>
   <span class='purchase-btn-text'>出品する</span>
   <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+<% end %>
+
+<%= link_to(new_food_path, class: 'random-btn') do %>
+  <span class='random-btn-text'>Rondom</span>
+  <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "random-btn-icon" %>
 <% end %>

@@ -1,0 +1,32 @@
+#user-show-main{
+  width: 100vw;
+  height: 100vh;
+  background-color: darkgreen;
+  padding: 20px;
+}
+
+#user-show-main{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+
+#user-show-nickname{
+  font-size: 30px;
+  color: white;
+  height: 100px;
+  text-align: center;
+  background-color: black;
+}
+
+#user-show-food-name{
+  text-align: center;
+}
+
+#user-show-foods{
+  height: 300px;
+  width: 300px;
+  margin: 20px;
+}

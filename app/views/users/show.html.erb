@@ -1,0 +1,23 @@
+<div class="header">
+<%= render "/shared/header"%>
+</div>
+
+    <div id="user-show-nickname">
+      <%= @user.nickname %>
+    </div>
+
+<div id="user-show-main">
+    <% @user.foods.each do |food| %>
+      <div id="user-show-foods">
+      
+        <div id="user-show-food-name">
+            <%= food.name %>
+        </div>
+        <div id="user-show-image">
+          <%=link_to (image_tag food.image, size: '300x300'), "#" %>
+        </div>
+        
+      </div>
+    <% end %>
+
+</div>
