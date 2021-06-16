@@ -1,5 +1,10 @@
     <div class="header">
     <%= render "/shared/header"%>
     </div>
-
-    
+<div>料理詳細ページ</div>
+<div id ="show-food-details">
+  <div><%= @food.name %></div>
+  <div><%= image_tag @food.image, size: "300x300" %></div>
+  <div><%= @food.ways %></div>
+  <div></div>
+</div>
