@@ -15,10 +15,24 @@ class FoodsController < ApplicationController
 
   def create
     @foods =Food.new(food_params)
+  
     if @foods.save
       redirect_to root_path
     else
       render :new
+    end
+  end
+
+  def edit
+    @foods = Food.find(params[:id])
+  end
+
+  def update
+    @foods = Food.find(params[:id])
+    if @foods.update(food_params)
+      redirect_to root_path
+    else
+      render ;edit
     end
   end
 
