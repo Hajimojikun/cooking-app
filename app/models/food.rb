@@ -3,6 +3,7 @@ class Food < ApplicationRecord
     validates :name
     validates :ways
     validates :type_of_food_id, numericality:{other_than: 1}
+    validates :image
   end
   belongs_to :user
   has_one_attached :image

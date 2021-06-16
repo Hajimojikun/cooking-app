@@ -1,12 +1,11 @@
-
- <div class="header">
+    <div class="header">
     <%= render "/shared/header"%>
     </div>
 
-<div id="new-wrapper">
-   
+    <div id="new-wrapper">
+    <%= render partial:'shared/error_messages', locals:{user: @foods}%>
     <div id="new-main">
-<%= render partial:'shared/error_messages', locals:{user: @foods}%>
+
       <div class="items-sell-main">
     <h2 class="items-sell-title">料理の情報を入力</h2>
     <%= form_with model: @foods, local: true do |f| %>
