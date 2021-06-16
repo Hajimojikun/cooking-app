@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   root   "foods#index"
   resources :foods
   resources :users,  only:[:show]
+  resources :randoms, only:[:index]
+  
+    get "randoms/search"
 end

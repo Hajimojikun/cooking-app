@@ -1,0 +1,12 @@
+    <div class="header">
+    <%= render "/shared/header"%>
+    </div>
+
+    <div>ランダムボタンの実装</div>
+
+    <%= form_with model: @random, url: randoms_search_path, method: :GET, local: true do |f| %>
+
+    <%= f.collection_select :type_of_food_id, TypeOfFood.all, :id, :name,{} %>
+
+      <%= f.submit "送信" %>
+    <%end %>

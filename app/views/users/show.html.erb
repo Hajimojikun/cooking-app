@@ -15,7 +15,7 @@
             <%= food.name %>
         </div>
         <div id="user-show-image">
-          <%=link_to (image_tag food.image, size: '300x300'), "#" %>
+          <%=link_to (image_tag food.image, size: '300x300'), food_path(food.id) %>
         </div>
         
       </div>

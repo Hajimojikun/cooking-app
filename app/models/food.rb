@@ -9,4 +9,5 @@ class Food < ApplicationRecord
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :type_of_food
+
 end
