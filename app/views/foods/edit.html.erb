@@ -41,6 +41,12 @@
         </div>
         <%= f.text_area :ways, class:"items-text", id:"item-info", placeholder:"料理の手順や説明" %>
       </div>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          料理の材料
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :ingredients, class:"items-text",id: "ingredients-info",  placeholder:"食材" %>
     </div>
     <%# /商品名と商品説明 %>
 

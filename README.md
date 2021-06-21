@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column       | Type       |Option                    |
+|--------------|------------|--------------------------|
+|nickname      | string     | null: false              |
+|email         | string     | null: false, unique: true|
 
-* Ruby version
 
-* System dependencies
+### Associations
+- has_many :foods
 
-* Configuration
+## foods テーブル
 
-* Database creation
+| Column            | Type      | Option                        |
+|-------------------|-----------|-------------------------------|
+| name              | string    | null: false                   |
+| ways              | text      | null: false                   |
+| type_of_food_id   | integer   | null: false                   |
+| user              | references| null: false, foreign_key: true|
 
-* Database initialization
+### Associations
+- belongs_to :user
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### ActiveHash
+- belongs_to :type_of_food

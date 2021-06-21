@@ -2,6 +2,18 @@
     <%= render "/shared/header"%>
     </div>
 
-<%= @random.name %>
-<%= image_tag @random.image%>
-<%= @random.ways %>
+
+<% if @random.present? %>
+<div id ="show-food-details">
+  <div id="show-food">
+    <div id="image-space"><%= image_tag @random.image, size: "400x400" %></div>
+    <div id="show-name-ways" >
+      <h2 class="show-name-ways" id="food-name-show"><%= @random.name %></h2>
+      <p class="show-name-ways" id="food-ways-show"><%=  @random.ways %></p>
+      <p class="show-name-ways" id="food-ingredients-show"><%= @random.ingredients %></p>
+    </div>
+    <% else %>
+    <div id="alart-non">誠に申し訳ありませんが<br>まだ献立が存在しません</div>
+    <div id="image-space"><%= image_tag "apology.png" %></div>
+</div>
+<% end %>

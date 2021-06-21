@@ -1,12 +1,23 @@
     <div class="header">
-    <%= render "/shared/header"%>
+    <%= render "/shared/header", user: @food.user%>
     </div>
-<div>料理詳細ページ</div>
+<div class=" deteils-of-food">料理の詳細</div>
 <div id ="show-food-details">
-  <div><%= @food.name %></div>
-  <div><%= image_tag @food.image, size: "300x300" %></div>
-  <div><%= @food.ways %></div>
-  <%if current_user.id == @food.user.id %>
-  <div>   <%= link_to "編集する",  edit_food_path(@food.id)%></div>
-  <%end %>
+  <div id="show-food">
+    <div id="show-image"><%= image_tag @food.image, size: "400x400" %></div>
+    <div id="show-name-ways" >
+      <h2 class="show-name-ways" id="food-name-show"><%= @food.name %></h2>
+      <p class="show-name-ways" id="food-ways-show"><%= @food.ways %></p>
+      <p class="show-name-ways" id="food-ingredients-show"><%= @food.ingredients %></p>
+    </div>
+
+    <div id="link_btns">
+        <%if user_signed_in? &&current_user.id == @food.user.id %>
+          <div id="edit_btn">   <%= link_to "編集する",  edit_food_path(@food.id)%></div>
+          <div id="delete_btn">   <%= link_to "削除する",  food_path(@food.id), method: :delete %></div>
+        <%end %>
+      </div>
+  </div>
+
+ 
 </div>

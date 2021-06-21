@@ -15,11 +15,15 @@
 }
 
 .header-title{
-  padding-top: 25px;
+  padding-top: 40px;
   font-size: 60px;
   text-align: center;
   width: calc(100% - 150px);
   background-color: chartreuse;
+  background-image: url("angel.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
 }
 
 .header-btns{
@@ -27,6 +31,10 @@
   width: 150px;
   padding: 10px 0;
   background-color: red;
+  background-image: url("menu-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
 }
 
 
@@ -43,28 +51,40 @@
   padding: 15px;
   margin: 10px;
   border: 1px solid black;
-  background-color: blue;
   color: white;
+  border-radius: 10px;
+}
+
+.log-btn:hover{
+  background-color: gold;
 }
 
 /* メイン（商品一覧） */
 #main{
   height: 100vh;
   width: 100vw;
-  background-color: coral;
   padding: 30px;
+  background-image: url("table.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #main-showings{
   height: 100%;
-  background-color: cornflowerblue;
   overflow: scroll;
+
 }
 
 .show-boxs{
   flex-wrap: wrap;
   display: flex;
   justify-content: space-around;
+}
+
+#pic:hover{
+  border-width: 1px;
+  border-color: gold;
+  cursor: pointer;
 }
 
 .show-box{

@@ -36,8 +36,17 @@ class FoodsController < ApplicationController
     end
   end
 
+  def destroy
+    food = Food.find(params[:id])
+    if food.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
+  end
+
   private
   def food_params
-    params.require(:food).permit(:name, :ways, :type_of_food_id, :image).merge(user_id: current_user.id)
+    params.require(:food).permit(:name, :ways, :type_of_food_id, :image, :ingredients).merge(user_id: current_user.id)
   end
 end
