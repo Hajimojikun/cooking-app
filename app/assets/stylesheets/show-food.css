@@ -1,0 +1,66 @@
+#show-food-details{
+  height: 100vh;
+  width: 100vw;
+
+}
+
+.deteils-of-food{
+  font-size: 30px;
+  background: coral;
+  text-align: center;
+
+}
+
+#show-food{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#food-name-show{
+  text-align: center;
+  width: 100%;
+  font-size: 40px;
+  background-color: #fff;
+}
+
+#food-ways-show{
+  text-align: left;
+  font-size: 20px;
+  width: 500px;
+  background-color: #fff;
+
+}
+
+.show-name-ways{
+  padding: 20px;
+  border: 1px solid white;
+  white-space: pre-wrap;
+}
+
+#link_btns{
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+#edit_btn{
+  padding: 10px;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+
+#delete_btn{
+  padding: 10px;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+
+#show-image{
+  margin-top: 20px;
+}

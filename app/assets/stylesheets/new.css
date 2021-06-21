@@ -4,6 +4,7 @@
   width: 100vw;
 }
 
+
 #new-main{
   height: 100%;
   width: 100%;
@@ -12,6 +13,9 @@
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  background-image: url("menu-1");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .items-sell-contents {
@@ -107,6 +111,7 @@
 /* 商品名と商品説明 */
 .new-items {
   padding: 2vh 0;
+  width: 400px;
 }
 
 .items-text {
@@ -116,6 +121,14 @@
   border: 1px solid #ccc;
   font-size: 16px;
   resize: none;
+}
+
+#item-info{
+  height: 250px;
+}
+
+#ingredients-info{
+  height: 250px;
 }
 
 .items-explain {
@@ -137,7 +150,7 @@
 }
 
 .items-detail>.form {
-  width: 300px;
+  width: 250px;
   padding: 2vh 0;
 }
 
@@ -196,25 +209,38 @@
 /* 下部ボタン */
 .sell-btn-contents {
   width: 100%;
+  height: 10rem;
   text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
 
 .sell-btn {
   background: #ea352d;
   border: 1px solid #ea352d;
   color: #fff;
-  width: 100%;
+  width: 100px;
   height: 50px;
   font-size: 14px;
   margin-bottom: 4vh;
+  display: block;
+  border-radius: 10px;
 }
 
 .back-btn {
   background: #aaa;
   border: 1px solid #aaa;
   color: #fff;
-  padding: 15px 35%;
-  text-decoration: none;
+  color: #fff;
+  width: 100px;
+  height: 50px;
+  font-size: 14px;
+  margin-bottom: 4vh;
+  display: block;
+  padding-top: 17px;
+  border-radius: 10px;
 }
 
 /* /下部ボタン */
