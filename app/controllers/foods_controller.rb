@@ -1,5 +1,7 @@
 class FoodsController < ApplicationController
-  before_action :authenticate_user!, only:[:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!, only:[:new, :show, :create, :edit, :update, :destroy]
+  before_action :find_params, only:[:edit, :update]
+  before_action :move_to, only:[:edit, :update]
 
   def index
     @foods = Food.all.order("created_at DESC")
@@ -37,6 +39,10 @@ class FoodsController < ApplicationController
   end
 
   def destroy
+    unless current_user.id === params[:user_id]
+      redirect_to root_path
+    end
+
     food = Food.find(params[:id])
     if food.destroy
       redirect_to root_path
@@ -49,4 +55,15 @@ class FoodsController < ApplicationController
   def food_params
     params.require(:food).permit(:name, :ways, :type_of_food_id, :image, :ingredients).merge(user_id: current_user.id)
   end
+
+  def move_to 
+    unless current_user.id === @foods.user_id
+      redirect_to root_path
+    end
+  end
+
+  def find_params
+    @foods = Food.find(params[:id])
+  end
+
 end

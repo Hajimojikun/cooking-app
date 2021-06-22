@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2021_06_14_163646) do
     t.string "name", null: false
     t.text "ways", null: false
     t.integer "type_of_food_id", null: false
+    t.text "ingredients", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

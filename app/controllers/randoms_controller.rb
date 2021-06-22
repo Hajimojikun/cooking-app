@@ -1,4 +1,5 @@
 class RandomsController < ApplicationController
+    before_action :authenticate_user!
 
   def index
     @random = Food.new
