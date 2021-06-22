@@ -91,16 +91,30 @@
   width: 300px;
   height: 300px;
   margin: 20px;
-  background-color: white;
 }
+
+.boxs{
+  background-color:white;
+}
+
+
 
 #food-title{
 text-align: center;
 padding-top: 20px;
 font-size: 40px;
+width: 300px;
+height: 100px;
+background-color: white;
+overflow: scroll;
 }
 
 #food-user-name{
   padding-right: 10px;
   text-align: right; 
+  font-size: 20px;
+}
+
+#food-user-name:hover{
+  color: blueviolet;
 }

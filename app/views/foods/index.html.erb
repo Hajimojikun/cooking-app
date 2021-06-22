@@ -15,7 +15,7 @@
               <div id="food-title">
               <h3 id="title"><%= food.name %></h3>
               </div>
-              <div id="food-user-name">by  <%=link_to food.user.nickname, user_path(food.user.id)%></div>
+              <div id="food-user-name"> <%=link_to "by #{food.user.nickname}", user_path(food.user.id)%></div>
             </div>
           </li>
           <% end %>
