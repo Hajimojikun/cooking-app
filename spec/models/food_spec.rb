@@ -12,6 +12,11 @@ RSpec.describe Food, type: :model do
       it "情報を正しく入力すれば投稿できる" do
         expect(@food).to be_valid
       end
+
+      it "料理の種類が2~5だと投稿できる" do
+        @food.type_of_food_id = 3
+        expect(@food).to be_valid
+      end
     end
 
     context "料理の投稿ができない" do
