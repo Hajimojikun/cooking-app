@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   overflow: scroll;
   background-color: darkgreen;
-  background-image: url("ingredients.jpg");
+  background-image: image-url("ingredients.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
