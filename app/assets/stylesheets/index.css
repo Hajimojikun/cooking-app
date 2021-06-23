@@ -20,7 +20,7 @@
   text-align: center;
   width: calc(100% - 150px);
   background-color: chartreuse;
-  background-image: image-url("angel.jpg");
+  background-image: url("angel.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -31,7 +31,7 @@
   width: 150px;
   padding: 10px 0;
   background-color: red;
-  background-image: image-url("menu-3.jpg");
+  background-image: url("menu-3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -64,7 +64,7 @@
   height: 100vh;
   width: 100vw;
   padding: 30px;
-  background-image: image-url("table.jpg");
+  background-image: url("table.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
